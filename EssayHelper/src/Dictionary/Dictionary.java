@@ -21,20 +21,7 @@ import java.util.*;
  */
 public class Dictionary {
         
-    private final String TITLECAP ="" +
-                               "<!DOCTYPE html>"+
-                               "<!-- saved from url=(0052)http://foundation.zurb.com/templates/workspace.html# -->"+
-                               "<html class=\" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths\" lang=\"en\" data-useragent=\"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">"+
-                               "<meta charset=\"utf-8\">"+
-                               "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\"\"";
 
-
-    
- /*
- * Dictionary()
- * Creates a Dictionary Class, with all final variables
- * Established
- */
     public Dictionary(String toDefine){
         try{
             Document definitionDoc = Jsoup.connect(
@@ -48,22 +35,45 @@ public class Dictionary {
         }
     }
     
-    //Parses through all of the HTML code of the website of the dictionary
-    //Will find the first instance of a information, parse it further to give just text.
-    //Returns an array of String
-    //[DEFINITION,REFUSE]
-    //Refuse will be the rest of the string after the included definition.
-    private String[] findInformationOxford(Document definitionDoc){
-        String[] returnVariable = new String[2];
+
+    
+    private ArrayList findInformationOxford(Document definitionDoc){
+    
         String definition = definitionDoc.toString();
-        definition = definition.substring(definition.indexOf("class=\"definition\""));
-        returnVariable[1] = definition.substring(definition.indexOf("</span>"));
-        definition = definition.substring(definition.indexOf("class=\"definition\""),definition.indexOf("</span>"));
         
+        int wordIndexCounter = 0;
+        int definitionIndexCounter = 0;
+        int SentenceIndexCounter = 0;
+        
+        ArrayList<String> informationArray = new ArrayList();
+
+        
+        definition = definition.substring(definition.indexOf("class=\"senseGroup\""));
+        while (definition.contains("class=\"iteration\"")){
+                            
+            if (definition.contains("class=\"partOfSpeech\"")){
+                definition = definition.substring(definition.indexOf("class=\"partOfSpeech\""));
+                informationArray.add(definition.substring(definition.indexOf(">") + 1, definition.indexOf("<")));
+            }
+            else{
+                definition = definition.substring(definition.indexOf("<h4>"));
+                informationArray.add(definition.substring(definition.indexOf(">") + 1, definition.indexOf("<")));
+            }
+            definition = definition.substring(definition.indexOf("class=\"definition\""));
+            informationArray.add(definition.substring(definition.indexOf(">") + 1,definition.indexOf(":")));
+            definition = definition.substring(definition.indexOf("class=\"example\""));
+            informationArray.add(definition.substring(definition.indexOf(">") + 1,definition.indexOf("<")));
+            
+            System.out.println("++++++++++++++++++++++++");
+            System.out.println(definition);
+            System.out.println(informationArray);
+            System.out.println("________________________");
+        }
+
         //System.out.println(returnVariable[0]);
         //System.out.println(returnVariable[1]);
         
-        return returnVariable;
+        return informationArray;
     }
     
     
@@ -74,6 +84,6 @@ public class Dictionary {
  * 
  */
     public static void main(String[] args){
-        Dictionary test = new Dictionary("Dragoon");
+        Dictionary test = new Dictionary("what");
     }
 }
