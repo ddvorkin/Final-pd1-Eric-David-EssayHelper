@@ -58,12 +58,11 @@ public class Dictionary {
             else{
                 definition = definition.substring(definition.indexOf("<h4>"));
                 informationArray.add(definition.substring(definition.indexOf(">") + 1, definition.indexOf("<")));
+            }
             definition = definition.substring(definition.indexOf("class=\"definition\""));
             informationArray.add(definition.substring(definition.indexOf(">") + 1,definition.indexOf(":")));
             definition = definition.substring(definition.indexOf("class=\"example\""));
             informationArray.add(definition.substring(definition.indexOf(">") + 1,definition.indexOf("<")));
-            }
-
             
             System.out.println("++++++++++++++++++++++++");
             System.out.println(definition);
