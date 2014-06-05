@@ -40,39 +40,13 @@ public class Dictionary {
     private ArrayList findInformationOxford(Document definitionDoc){
     
         String definition = definitionDoc.toString();
-        
-        int wordIndexCounter = 0;
-        int definitionIndexCounter = 0;
-        int SentenceIndexCounter = 0;
-        
-        ArrayList<String> informationArray = new ArrayList();
-
-        
         definition = definition.substring(definition.indexOf("class=\"senseGroup\""));
-        while (definition.contains("class=\"iteration\"")){
-                            
-            if (definition.contains("class=\"partOfSpeech\"")){
-                definition = definition.substring(definition.indexOf("class=\"partOfSpeech\""));
-                informationArray.add(definition.substring(definition.indexOf(">") + 1, definition.indexOf("<")));
-            }
-            else{
-                definition = definition.substring(definition.indexOf("<h4>"));
-                informationArray.add(definition.substring(definition.indexOf(">") + 1, definition.indexOf("<")));
-            }
-            definition = definition.substring(definition.indexOf("class=\"definition\""));
-            informationArray.add(definition.substring(definition.indexOf(">") + 1,definition.indexOf(":")));
-            definition = definition.substring(definition.indexOf("class=\"example\""));
-            informationArray.add(definition.substring(definition.indexOf(">") + 1,definition.indexOf("<")));
-            
-            System.out.println("++++++++++++++++++++++++");
-            System.out.println(definition);
-            System.out.println(informationArray);
-            System.out.println("________________________");
-        }
-
-        //System.out.println(returnVariable[0]);
-        //System.out.println(returnVariable[1]);
         
+        ArrayList<DLinkedListNode> informationArray = new ArrayList();
+        
+        if ()
+
+        System.out.println(definition);
         return informationArray;
     }
     
@@ -84,6 +58,6 @@ public class Dictionary {
  * 
  */
     public static void main(String[] args){
-        Dictionary test = new Dictionary("what");
+        Dictionary test = new Dictionary("Sensible");
     }
 }
