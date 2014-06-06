@@ -35,6 +35,6 @@ public class DLinkedListNode {
         data = givenData;
     }
     public String toString(){
-        return "Dictionary Node Linked List \n" + nodeType + "\n data ";
+        return "Dictionary Node Linked List \n" + nodeType + "\n " + data;
     }
 }
