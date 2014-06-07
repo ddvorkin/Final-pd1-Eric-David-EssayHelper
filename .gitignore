@@ -11,3 +11,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /EssayHelper/dist/
+/DictionaryAtSchool/dist/
+/One/build/
+/One/dist/
+/One/nbproject/private/
+/EssayHelper/build/
+/EssayHelper/nbproject/private/

@@ -16,8 +16,8 @@ public class Dictionary {
         
     public Dictionary(String toDefine){
         try{
-            System.setProperty("http.proxyHost", "149.89.1.30");
-            System.setProperty("http.proxyPort", "3128");
+            //System.setProperty("http.proxyHost", "149.89.1.30");
+            //System.setProperty("http.proxyPort", "3128");
             Document definitionDoc = Jsoup.connect(
                     "http://www.oxforddictionaries.com/us/definition/american_english/" + toDefine
             ).followRedirects(true).get();
@@ -34,7 +34,7 @@ public class Dictionary {
 
     
     private DLinkedListNode findInformationOxford(Document definitionDoc, String word){
-    
+           
 
         String definition = definitionDoc.toString();
         definition = definition.substring(definition.indexOf("class=\"senseGroup\""));
@@ -42,6 +42,9 @@ public class Dictionary {
         DLinkedListNode first = new DLinkedListNode("DUMMY","DUMMY");
         boolean whileBreaker1 = false;
         boolean whileBreaker2 = false;
+        
+        System.out.println(definition);
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
                 
         while(!whileBreaker1 && !whileBreaker2){
             if (definition.contains("class=\"partOfSpeech\"")){
@@ -64,13 +67,24 @@ public class Dictionary {
                     definition = definition.substring(definition.indexOf("class=\"definition\"") + 18);
 
                     
-                    if (definition.contains("class=\"example\"")){
-                        definition = definition.substring(definition.indexOf("class=\"example\""));
-                        DLinkedListNode newData2 = new DLinkedListNode(definition.substring(definition.indexOf(">")+1, definition.indexOf("<")), "Word-Example");
-                        prev.setNext(newData2);
-                        newData2.setPrev(prev);
-                        prev = newData1;
-                        definition = definition.substring(definition.indexOf("class=\"example\"") + 15);
+                    if (definition.contains("class=\"example\"") || definition.contains("class=\"sentence\"")){
+                        if (definition.indexOf("class=\"example\"") < definition.indexOf("class=\"sentence\"")){
+                            definition = definition.substring(definition.indexOf("class=\"example\""));
+                            DLinkedListNode newData2 = new DLinkedListNode(definition.substring(definition.indexOf(">")+1, definition.indexOf("<")), "Word-Example");
+                            prev.setNext(newData2);
+                            newData2.setPrev(prev);
+                            prev = newData1;
+                            definition = definition.substring(definition.indexOf("class=\"example\"") + 15);                           
+                        }
+                        else{
+                            definition = definition.substring(definition.indexOf("class=\"sentence\""));
+                            DLinkedListNode newData2 = new DLinkedListNode(definition.substring(definition.indexOf(">")+1, definition.indexOf("<")), "Word-Example");
+                            prev.setNext(newData2);
+                            newData2.setPrev(prev);
+                            prev = newData1;
+                            definition = definition.substring(definition.indexOf("class=\"sentence\"") + 16); 
+                        }
+                        
                 }
                     else{
                         DLinkedListNode newData2 = new DLinkedListNode("EMPTY", "Word-Example");
