@@ -58,5 +58,6 @@ Eric Cheang
 
 6/7: After much struggling, I switch over to a simpler dictionary website. Now using           http://www.macmillandictionary.com/us/dictionary/american/dragoon
          
-    
+6/9 Made HTML page. Must incorporate to use java file data.
+David Dvorkin    
 
