@@ -36,6 +36,27 @@ Conducted a bunch of print lines to figure out where to parse.
 Parsed and put things inside of the HTML. 
 First print, but riddled with bugs. 
 
-
-
 6/3: Attempts at making an html page.
+
+Eric Cheang
+https://github.com/ddvorkin/Final-pd1-Eric-David-EssayHelper/commit/93fd70ae5ac1fe15c4ad77dffc912d9f200680c4
+
+6/4: Instead of an arrayList, I began looking into a linked list to store the information. 
+
+Eric Cheang
+https://github.com/ddvorkin/Final-pd1-Eric-David-EssayHelper/network
+
+6/5: Began the great ification, which is where I bound every parsing parameter to an if statement. 
+
+Eric Cheang
+https://github.com/ddvorkin/Final-pd1-Eric-David-EssayHelper/commit/8be6b9e5de7518a8d0d0da4fd74f89b8c48042da
+
+6/6: Finished the great ification. There are major problems where the head node is replaced because we record phrases after sentences. 
+
+Eric Cheang
+
+
+6/7: After much struggling, I switch over to a simpler dictionary website. Now using           http://www.macmillandictionary.com/us/dictionary/american/dragoon
+         
+    
+
