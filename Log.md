@@ -61,3 +61,5 @@ Eric Cheang
 6/9 Made HTML page. Must incorporate to use java file data.
 David Dvorkin    
 
+6/10 Attempted to place .jar file in folder - failed. Switching to work with netbeans. Made for loop and helped with more definitions.
+David Dvorkin
