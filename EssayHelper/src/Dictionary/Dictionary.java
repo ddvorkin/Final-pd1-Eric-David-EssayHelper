@@ -45,6 +45,7 @@ public class Dictionary {
 				x = x + 1;
 				for (int y = x; y > 0; y = y - 1;){
 					definition.replace(".", y); 
+}}
                     definition = definition.trim();
                     definition = definition.substring(0,1).toUpperCase() + definition.substring(1) + ".";
                 }
