@@ -38,6 +38,12 @@ public class Dictionary {
                     definition = definition.replaceAll(">", "");
                     definition = definition.replaceAll("</span", "");
                     definition = definition.replaceAll("</a.", " ");
+		int x = 0;
+		for (int i = 0; i < definition.length; i = i + 1;){
+			if (i = "."){
+				x = x + 1;
+				for (int y = x; y > 0; y = y - 1;){
+					definition.replace(".", y); 
                     definition = definition.trim();
                     definition = definition.substring(0,1).toUpperCase() + definition.substring(1) + ".";
                 }
