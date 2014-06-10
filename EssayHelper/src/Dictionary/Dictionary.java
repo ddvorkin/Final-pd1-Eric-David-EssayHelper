@@ -12,9 +12,10 @@ import java.util.*;
 
 public class Dictionary {
     
-    
+    private String definition;
         
     public Dictionary(String toDefine){
+        toDefine = toDefine.toLowerCase();
         try{
             System.setProperty("http.proxyHost", "149.89.1.30");
             System.setProperty("http.proxyPort", "3128");
@@ -22,7 +23,7 @@ public class Dictionary {
                     "http://www.macmillandictionary.com/us/dictionary/american/" + toDefine
             ).followRedirects(true).get();
             
-            String definition = definitionDoc.toString();
+            definition = definitionDoc.toString();
             definition = definition.substring(definition.indexOf("<span class=\"DEFINITION\">"));
             definition = definition.substring(definition.indexOf("</span>"), definition.lastIndexOf("</span>") + 20);
             StringTokenizer tokenizer = new StringTokenizer(definition);
@@ -49,14 +50,16 @@ public class Dictionary {
                 }
             }
             System.out.println(definition);
-    }
-        catch(IOException e){
-            System.out.println("eror");
+        }
+        catch(Exception e){
+            definition = "Definition not found.";
+            System.out.println(definition);
         }
     }
+        
     
 
     public static void main(String[] args){
-        Dictionary test = new Dictionary("rape");
+        Dictionary test = new Dictionary("Happy");
     }
 }
