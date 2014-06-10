@@ -1,5 +1,3 @@
-
-
 package Dictionary;
 import java.io.IOException;
 import org.jsoup.*;
