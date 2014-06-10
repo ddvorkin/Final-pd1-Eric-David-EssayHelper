@@ -16,6 +16,7 @@ public class Dictionary {
         
     public Dictionary(String toDefine){
         toDefine = toDefine.toLowerCase();
+        toDefine = toDefine.replace(" ", "-");
         try{
             System.setProperty("http.proxyHost", "149.89.1.30");
             System.setProperty("http.proxyPort", "3128");
@@ -32,7 +33,6 @@ public class Dictionary {
             String tempToken = "";
             while (tokenizer.hasMoreTokens()){
                 String curToken = tokenizer.nextToken();
-                //System.out.println(curToken);
                 if (curToken.contains("title=") && curToken.contains(">")){
                     definition = definition + curToken.substring(curToken.indexOf(">"), curToken.lastIndexOf(">")) + "";
                     definition = definition.replaceAll("</a>", " ");
@@ -43,7 +43,6 @@ public class Dictionary {
                     definition = definition.substring(0,1).toUpperCase() + definition.substring(1) + ".";
                 }
             }
-            System.out.println(definition);
         }
         catch(Exception e){
             definition = "Definition not found.";
@@ -51,9 +50,13 @@ public class Dictionary {
         }
     }
         
+    public String getDefinition(){
+        return definition;
+    }
     
 
     public static void main(String[] args){
-        Dictionary test = new Dictionary("Happy");
+        Dictionary test = new Dictionary("home page");
+        System.out.println(test.getDefinition());
     }
 }
