@@ -1,13 +1,6 @@
 package Dictionary;
-import java.io.IOException;
 import org.jsoup.*;
-import org.jsoup.examples.*;
-import org.jsoup.helper.*;
 import org.jsoup.nodes.*;
-import org.jsoup.parser.*;
-import org.jsoup.safety.*;
-import org.jsoup.select.*;
-import java.io.*;
 import java.util.*;
 
 public class Dictionary {
