@@ -63,3 +63,6 @@ David Dvorkin
 
 6/10 Attempted to place .jar file in folder - failed. Switching to work with netbeans. Made for loop and helped with more definitions.
 David Dvorkin
+
+6/13 Trying different things from online to get html to work with Dictionary. Encountering difficulties; nothing yet.
+David Dvorkin
