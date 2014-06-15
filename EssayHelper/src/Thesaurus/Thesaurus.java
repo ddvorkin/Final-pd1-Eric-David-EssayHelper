@@ -43,8 +43,4 @@ public class Thesaurus {
         public String getSynonyms(){
             return synonyms;
         }
-public static void main(String [ ] args){
-        Thesaurus test = new Thesaurus("complex");
-        System.out.println(test.getSynonyms());
-}
 }

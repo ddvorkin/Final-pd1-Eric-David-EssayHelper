@@ -93,6 +93,14 @@ body {
     color: white;
 }
 
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -184,9 +192,9 @@ nav a:hover {
 
     nav a {
         float: left;
-        width: 20%;  /*27*/
-        margin: 0 1.0%; /*1.7*/
-        padding: 10px 0.5%; /*25px 2%*/
+        width: 27%;  /*27*/
+        margin: 0 1.7%; /*1.7*/
+        padding: 25px 2%; /*25px 2%*/
         margin-bottom: 0;
     }
 
@@ -242,12 +250,12 @@ nav a:hover {
    ============ */
 
     .main article {
-        float: left;
+        float: right;
         width: 57%;
     }
-
+    
     .main aside {
-        float: right;
+        float: left;
         width: 28%;
     }
 }
