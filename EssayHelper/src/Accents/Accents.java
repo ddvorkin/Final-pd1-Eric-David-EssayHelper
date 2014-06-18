@@ -12,8 +12,5 @@ public class Accents{
         return accents;
     }
 
-    public static void main(String [] args){
-        Accents newAccent = new Accents();
-        System.out.println(newAccent.getAccents());
-    }
+   
 }
