@@ -30,16 +30,22 @@ public class PlannerNode {
     }
     
     public void checkTimePast(){
-        if (endTime.get(endTime.HOUR) < startTime.get(startTime.HOUR) && (endTime.get(endTime.AM_PM) == startTime.get(startTime.AM_PM))){
+        int sumEnd = (endTime.get(endTime.HOUR_OF_DAY) + endTime.get(endTime.MINUTE) + endTime.get(endTime.SECOND));
+        int sumStart = (startTime.get(startTime.HOUR_OF_DAY) + startTime.get(startTime.MINUTE) + startTime.get(startTime.SECOND));
+        if (sumEnd < sumStart){
             isPast = true;
         }
-        
+    }
+    
+    public boolean returnIsPast(){
+        return isPast;
     }
     
     public static void main(String [] args){
-        PlannerNode test = new PlannerNode("Finishing This Shit",11,25,0);
-        System.out.println(test.returnBeginTime());
+        PlannerNode test = new PlannerNode("Finishing This Shit",21,44,0);
         System.out.println(test.returnBeginTime());
         System.out.println(test.returnEndTime());
+        test.checkTimePast();
+        System.out.println(test.returnIsPast());
     }
 }
