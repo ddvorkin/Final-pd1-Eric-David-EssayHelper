@@ -95,7 +95,8 @@ https://github.com/ddvorkin/Final-pd1-Eric-David-EssayHelper/commit/3cdd335cc859
 
 6/12: Integration
 Began looking into how I can integrate Dictionary to a user without the terminal. Looked into HTML, and thus, javascript. 
-__________________________________________________________________________________________________________________
+Edited Thesaurus; David Dvorkin__________________________________________________________________________________________
+
 Eric Cheang
 https://github.com/ddvorkin/Final-pd1-Eric-David-EssayHelper/commit/815cfaf706592af578bdc588f9a5b2e9dcfd0d45
 https://github.com/ddvorkin/Final-pd1-Eric-David-EssayHelper/commit/a521728a8ca0e053151459d1f1074c62d34ea3f3
@@ -115,7 +116,8 @@ FIXING BRANCHES SORRY
 Picked up a nifty HTML template. Played around with that, making a snazzy front page webpage and set up a free server. 
 
 Fixed the branch I made the day before. This causes a large amount of commits of nothing but deleting and recloning. 
-__________________________________________________________________________________________________________________
+
+Accents.java ; David Dvorkin_____________________________________________________________________________________________
 
 Eric Cheang
 https://github.com/ddvorkin/Final-pd1-Eric-David-EssayHelper/commit/63699c7e18722ed5ca8b13ad801ce5da5e4111c4
