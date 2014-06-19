@@ -141,3 +141,19 @@ Because of the focus of making things pretty, forgot to include something we lea
 
 Additionally, fixed up the log.
 __________________________________________________________________________________________________________________
+Eric Cheang
+6/18: Planner stuff.
+
+Began the planner node, which would be implemented in a queue situation. The node was almost completed this day.
+__________________________________________________________________________________________________________________
+Eric Cheang
+6/19: Less planner stuff.
+
+Worked on the planner, but was unable to finish it. Very difficult to implement timers and the planner checking for tasks that have expired without javascript or a constantly running interface. 
+
+Finished the terminal interface for the things that work. Found that my Thesaurus is buggy and that it might be an old version because I did not push from school. 
+
+__________________________________________________________________________________________________________________
+
+ggnore
+
