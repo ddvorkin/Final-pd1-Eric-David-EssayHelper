@@ -8,6 +8,15 @@ Eric Cheang
 David Dvorkin
 
 Instructions for use:
+
+<h1> To use, navigate to the directory dist and use...
+
+<h2>java -jar EssayHelper.jar</h2> 
+
+and follow the prompts.
+
+<h1>
+
 <del>Because NetBeans was used for this project (Eclipse doesn't work on my laptop) and because it is not a finished project you must compile each "application" manually by compiling the java files found in FinalProject/EssayHelper/src with the classpath of jsoup inside of the src folder.</del>
 
 Front end is now the terminal. While not optimal, as while writing an essay, you wouldn't want the terminal open, it is what was available with my current resources.
