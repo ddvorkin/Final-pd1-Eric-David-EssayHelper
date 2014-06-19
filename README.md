@@ -9,13 +9,13 @@ David Dvorkin
 
 Instructions for use:
 
-<h1> To use, navigate to the directory dist and use...
+<h2> To use, navigate to the directory dist and use...
 
-<h2>java -jar EssayHelper.jar</h2> 
+<h1>java -jar EssayHelper.jar</h1>
 
 and follow the prompts.
 
-<h1>
+</h2>
 
 <del>Because NetBeans was used for this project (Eclipse doesn't work on my laptop) and because it is not a finished project you must compile each "application" manually by compiling the java files found in FinalProject/EssayHelper/src with the classpath of jsoup inside of the src folder.</del>
 
