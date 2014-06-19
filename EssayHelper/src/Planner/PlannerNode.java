@@ -41,11 +41,8 @@ public class PlannerNode {
         return isPast;
     }
     
-    public static void main(String [] args){
-        PlannerNode test = new PlannerNode("Finishing This Shit",21,44,0);
-        System.out.println(test.returnBeginTime());
-        System.out.println(test.returnEndTime());
-        test.checkTimePast();
-        System.out.println(test.returnIsPast());
+    public String toString(){
+        String returnString = this.TaskName + "\n Start Time: " + this.returnBeginTime() + "\n" + "End Time: " + this.returnEndTime();
+        return returnString;
     }
 }
